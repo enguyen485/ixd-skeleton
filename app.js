@@ -39,12 +39,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', search.view);
 app.get('/logout', logout.view);
 app.get('/password', password.view);
 app.get('/location', location.view);
 app.get('/favorite', favorite.view);
-app.get('/search', search.view);
+app.get('/profile', index.view);
 app.get('/report', report.view);
 
 // Example route
