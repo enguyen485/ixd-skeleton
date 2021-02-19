@@ -3,36 +3,58 @@
 	<title>Test Page</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<!-- icons stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<div id="navbar">
+	<a href="favorite"><i id="btn navcon" class="fa fa-heart fa-lg"></i></a>
+	<a href="search"><i id="btn navcon" class="fa fa-search fa-lg"></i></a>
+	<a href="/"><i id="btn navcon" class="fa fa-user fa-lg"></i></a>
+</div>
 <div class="container">
+		<a href="logout"><button id="logout" class="btn logout"><i class="fa fa-sign-out fa-lg"></i></button></a><br><br>
 		<div id="photo" class="profile">
-			<h3>Profile Photo</h3>
 			<img id="photo" class='img-responsive' src="http://hci.stanford.edu/courses/cs547/Resources/Pictures/klemmer_grad.jpg" />
-		</div>
-
-		<div class="Information">
 			<h1 id="name">Nandini Kapa</h1>
 			<p>San Diego, CA</p>
-
-			<h3>Currently positive with COVID-19?</h3>
-
-			<button id="results" class="btn btn-primary btn-lg">YES</button>
-			<button id="results" class="btn btn-primary btn-lg">NO</button>
-
-			<h3>Where have I been?</h3>
-
-			<h5>1. Target, 123 East Dr. : 1/21/21 </h5>
-			<h5>2. Vons, 54 Nova Ave. : 1/18/21 </h5>
-			<h5>3. Costco, 8543 3rd St. : 1/2/21 </h5>
-
-			<button id="Locations" class="btn btn-primary btn-lg">SAVE</button>
-			<a href="location"><button id="Locations" class="btn btn-primary btn-lg">ADD LOCATIONS</button></a>
-
-			<br>
-			<br>
-			<a href="password"><button id="password" class="btn btn-primary btn-lg">CHANGE PASSWORD</button></a>
 		</div>
 
+		<hr>
+
+		<div class="Information">
+			<h3>Currently positive with COVID-19?</h3>
+
+			<button id="yes" class="btn">YES</button>
+			<button id="no" class="btn">NO</button>
+
+			<hr>
+
+			<h3>Where have I been?</h3>
+			<input type="text" id="locate" name="locate" placeholder="Target, 123 East Dr." >
+			<input type="date" value="01/21/21">
+			<button class="btn"><i class="fa fa-close"></i></button><br><br>
+			
+			<input type="text" id="locate" name="locate" placeholder="Vons, 54 Nova Ave.">
+			<input type="date" value="01/18/21">
+			<button class="btn"><i class="fa fa-close"></i></button><br><br>
+			
+			<input type="text" id="locate" name="locate" placeholder="Costco, 8543 3rd St.">
+			<input type="date" value="01/2/21">
+			<button class="btn"><i class="fa fa-close"></i></button><br><br>
+
+			<form>
+				<input type="text" id="locate" name="locate" placeholder="Location">
+				<input type="date" id="datep" name="datep" ><br><br>
+				<input class="btn" type="submit" value="SAVE">
+			</form>
+
+			<hr>
+
+			<a href="password"><button id="password" class="btn">CHANGE PASSWORD</button></a>
+		</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/introHCI.js"></script>
 </body>
 </html>

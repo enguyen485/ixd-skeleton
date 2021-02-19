@@ -12,6 +12,10 @@ var index = require('./routes/index');
 // Example route
 var password = require('./routes/password');
 var location = require('./routes/location');
+var logout = require('./routes/logout');
+var search = require('./routes/search');
+var favorite = require('./routes/favorite');
+var report = require('./routes/report');
 
 var app = express();
 
@@ -36,8 +40,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/logout', logout.view);
 app.get('/password', password.view);
 app.get('/location', location.view);
+app.get('/favorite', favorite.view);
+app.get('/search', search.view);
+app.get('/report', report.view);
 
 // Example route
 // app.get('/users', user.list);
