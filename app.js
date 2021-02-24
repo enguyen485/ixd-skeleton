@@ -12,10 +12,13 @@ var index = require('./routes/index');
 // Example route
 var password = require('./routes/password');
 var location = require('./routes/location');
-var logout = require('./routes/logout');
+var login = require('./routes/login');
 var search = require('./routes/search');
 var favorite = require('./routes/favorite');
 var report = require('./routes/report');
+var signup = require('./routes/signup');
+var addLocation = require('./routes/addLocation');
+var deleteLocation = require('./routes/deleteLocation');
 
 var app = express();
 
@@ -39,13 +42,16 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', search.view);
-app.get('/logout', logout.view);
+app.get('/search', search.view);
+app.get('/', login.view);
 app.get('/password', password.view);
 app.get('/location', location.view);
 app.get('/favorite', favorite.view);
 app.get('/profile', index.view);
 app.get('/report', report.view);
+app.get('/signup', signup.view);
+app.get('/addLocation', addLocation.addLocation);
+app.get('/deleteLocation', deleteLocation.deleteLocation);
 
 // Example route
 // app.get('/users', user.list);

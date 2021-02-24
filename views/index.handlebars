@@ -10,11 +10,11 @@
 <body>
 <div id="navbar">
 	<a href="favorite"><i id="btn" class="fa fa-heart fa-lg"></i></a>
-	<a href="/"><i id="btn" class="fa fa-search fa-lg"></i></a>
+	<a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
 	<a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
 </div>
 <div class="container">
-		<a href="logout"><button id="logout" class="btn logout"><i class="fa fa-sign-out fa-lg"></i></button></a><br><br>
+		<a href="/"><button id="logout" class="btn logout"><i class="fa fa-sign-out fa-lg"></i></button></a><br><br>
 		<div id="photo" class="profile">
 			<img id="photo" class='img-responsive' src="http://hci.stanford.edu/courses/cs547/Resources/Pictures/klemmer_grad.jpg" />
 			<h1 id="name">Nandini Kapa</h1>
@@ -32,21 +32,21 @@
 			<hr>
 
 			<h3>Where have I been?</h3>
-			<input type="text" id="locate" name="locate" placeholder="Target, 123 East Dr." >
-			<input type="date" value="01/21/21">
-			<button class="btn"><i class="fa fa-close"></i></button><br><br>
-			
-			<input type="text" id="locate" name="locate" placeholder="Vons, 54 Nova Ave.">
-			<input type="date" value="01/18/21">
-			<button class="btn"><i class="fa fa-close"></i></button><br><br>
-			
-			<input type="text" id="locate" name="locate" placeholder="Costco, 8543 3rd St.">
-			<input type="date" value="01/2/21">
-			<button class="btn"><i class="fa fa-close"></i></button><br><br>
 
-			<form>
-				<input type="text" id="locate" name="locate" placeholder="Location">
-				<input type="date" id="datep" name="datep" ><br><br>
+			{{#each LocationsVisited}}
+				<div class ="Locations">
+					<form id="deleteLocationForm" role="form" method="delete" action="/deleteLocation">
+						<input type="text" readonly="readonly" id="Location" name="Location" value="{{Place}}">
+						<input type="text" readonly="readonly" id="Date" name="Date" value="{{Date}}">
+						<input class="btn" type="submit" value="X">
+					</form>
+				</div>
+			{{/each}}
+			<br><br>
+{{!-- <button class="btn"><i class="fa fa-close"></i></button><br><br> --}}
+			<form id="addLocationForm" role="form" method="get" action="/addLocation">
+				<input type="text" id="locate" name="Location" placeholder="Location">
+				<input type="date" id="date" name="Date" ><br><br>
 				<input class="btn" type="submit" value="SAVE">
 			</form>
 

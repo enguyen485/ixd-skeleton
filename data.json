@@ -1,0 +1,23 @@
+{
+	"LocationsVisited": [
+		{
+			"Place": "Target, 123 Dr",
+			"Date": "2021-02-15"			
+		},
+		{
+			"Place": "Vons, 54 Nova Ave.",
+			"Date": "2021-02-16"
+		},
+		{
+			"Place": "Costco, 8543 3rd St.",
+			"Date": "2021-02-18"
+		}
+	],
+	"SavedLocations": [
+		{
+			"name": "Doug Engelbart",
+			"description": "Has awesome pet mice",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		}
+	]
+}
