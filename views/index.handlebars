@@ -24,12 +24,6 @@
 		<hr>
 
 		<div class="Information">
-			<h3>Currently positive with COVID-19?</h3>
-
-			<button id="yes" class="btn">YES</button>
-			<button id="no" class="btn">NO</button>
-
-			<hr>
 
 			<h3>Where have I been?</h3>
 
@@ -43,12 +37,21 @@
 				</div>
 			{{/each}}
 			<br><br>
-{{!-- <button class="btn"><i class="fa fa-close"></i></button><br><br> --}}
+
 			<form id="addLocationForm" role="form" method="get" action="/addLocation">
 				<input type="text" id="locate" name="Location" placeholder="Location">
 				<input type="date" id="date" name="Date" ><br><br>
-				<input class="btn" type="submit" value="SAVE">
+				<input class="btn" type="submit" value="ADD">
 			</form>
+
+			<hr>
+			<h3>Currently positive with COVID-19?</h3>
+			<form id="positiveForm" role="form" method="update" action="/updateResult">
+				<input class="btn" type="submit" id="Result" name="Result" value="YES">
+				<input class="btn" type="submit" id="Result" name="Result" value="NO">
+				
+			</form>
+			
 
 			<hr>
 

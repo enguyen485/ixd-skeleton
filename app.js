@@ -19,6 +19,7 @@ var report = require('./routes/report');
 var signup = require('./routes/signup');
 var addLocation = require('./routes/addLocation');
 var deleteLocation = require('./routes/deleteLocation');
+var updateResult = require('./routes/updateResult');
 
 var app = express();
 
@@ -52,6 +53,7 @@ app.get('/report', report.view);
 app.get('/signup', signup.view);
 app.get('/addLocation', addLocation.addLocation);
 app.get('/deleteLocation', deleteLocation.deleteLocation);
+app.get('/updateResult', updateResult.updateResult);
 
 // Example route
 // app.get('/users', user.list);

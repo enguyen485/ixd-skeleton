@@ -14,6 +14,20 @@
 		}
 	],
 	"SavedLocations": [
-
+		{
+			"Place": "Target, 123 Dr",
+			"Positive": 10,
+			"Total": 40			
+		},
+		{
+			"Place": "Vons, 54 Nova Ave.",
+			"Positive": 3,
+			"Total": 34	
+		},
+		{
+			"Place": "Costco, 8543 3rd St.",
+			"Positive": 39,
+			"Total": 97	
+		}
 	]
 }

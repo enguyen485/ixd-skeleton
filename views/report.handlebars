@@ -3,10 +3,55 @@
 	<title>View Report</title>
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<!-- icons stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<h1>View Report</h1>
-	<h3>View the report for a particular location.</h1>
-	</body>
+<div id="navbar">
+	<a href="favorite"><i id="btn" class="fa fa-heart fa-lg"></i></a>
+	<a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
+	<a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
+</div>
+<div class="container">
 
+
+		<div class="Information">
+			<h1>Current Reported Cases</h1>
+			<hr>
+			<h3>Your Saved Locations:</h3>
+			<table>
+				<tr>
+					<th>Location</th>
+					<th>Positive Cases</th>
+					<th>Total Reported</th>
+				</tr>
+			{{#each SavedLocations}}
+				<div class ="Locations">
+					{{!-- <text>{{Place}}</text>
+					<text>| Positive Cases:</text>
+					<text>{{Positive}}</text> 
+					<text>/ Total Reported:</text>
+					<text>{{Total}}</text> --}}
+					{{!-- <input type="text" readonly="readonly" value="{{Place}}"> 
+					<input type="text" readonly="readonly" value="Positive Cases:  {{Positive}}">
+					<input type="text" readonly="readonly" value="Total Reported:  {{Total}}"> <br><br> --}}
+					<tr>
+						<th>{{Place}}</th>
+						<th>{{Positive}}</th>
+						<th>{{Total}}</th>
+					</tr>
+					{{!-- <form id="deleteLocationForm" role="form" method="delete" action="/deleteLocation">
+						<input type="text" readonly="readonly" id="Location" name="Location" value="{{Place}}">
+						<input type="text" readonly="readonly" id="Date" name="Date" value="{{Date}}">
+						<input class="btn" type="submit" value="X">
+					</form> --}}
+				</div>
+			{{/each}}
+			</table>
+		</div>
+</div>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/introHCI.js"></script>
+</body>
 </html>
