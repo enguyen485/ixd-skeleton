@@ -1,7 +1,12 @@
 {
+	"PositiveResult":[
+		{
+			"Positive": ""
+		}
+	],
 	"LocationsVisited": [
 		{
-			"Place": "Target, 123 Dr",
+			"Place": "Target, 123 Dr.",
 			"Date": "2021-02-15"			
 		},
 		{
@@ -15,14 +20,29 @@
 	],
 	"SavedLocations": [
 		{
-			"Place": "Target, 123 Dr",
+			"Place": "Target, 123 Dr.",
 			"Positive": 10,
 			"Total": 40			
+		},
+		{
+			"Place": "Ralphs, 2157 Second St.",
+			"Positive": 28,
+			"Total": 73	
+		},
+		{
+			"Place": "Whole Foods, 3485 Third St.",
+			"Positive": 3,
+			"Total": 59	
 		},
 		{
 			"Place": "Vons, 54 Nova Ave.",
 			"Positive": 3,
 			"Total": 34	
+		},
+		{
+			"Place": "Walmart, 537 First Ave.",
+			"Positive": 94,
+			"Total": 167	
 		},
 		{
 			"Place": "Costco, 8543 3rd St.",

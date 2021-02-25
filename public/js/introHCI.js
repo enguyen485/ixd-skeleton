@@ -30,3 +30,16 @@ function initializePage() {
         $("#yes").css('color', 'black');
 	});
 }
+
+
+function altertChange() {
+    alert("Success! Your password has been updated.");
+}
+
+function alertNO() {
+    alert("Thank you for notifying us of your negative result.");
+}
+
+function alertYES() {
+    alert("Thank you for notifying us of your positive result.");
+}
