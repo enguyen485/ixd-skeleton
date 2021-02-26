@@ -9,12 +9,15 @@
 </head>
     <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
         <a href="/"><button id="logout" class="logout"><i class="fa fa-sign-out fa-lg"></i></button></a>
-        <a href="report"><button id="viewrep" class="report">VIEW REPORT</button></a>
+        <button id="viewrep" class="report" onclick="openForm()">VIEW REPORT</button>
         <input class="searchbar" id="searchbar" type="text" placeholder="&#xF002;    Search for a Location...">
         <!-- CREDIT: This code was generated and expalined to us by https://www.embedgooglemap.net/ -->
+        <div id="myForm"></div>
         <div class="mapouter">
             <div class="canvas">
-                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=1347%20Paseo%20Anacapa,%20San%20Dimas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <div class="details">
+                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=1347%20Paseo%20Anacapa,%20San%20Dimas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
                 <a href="https://putlocker-is.org"></a>
                 <br>
                 <a href="https://www.embedgooglemap.net"></a>
@@ -25,5 +28,7 @@
             <a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
             <a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
         </div>
+        <script src="https://code.jquery.com/jquery.js"></script>
+	    <script src="/js/introHCI.js"></script>
 	</body>
 </html>
