@@ -14,6 +14,25 @@
     display: inline-block;
     vertical-align: middle;
     filter: grayscale(100%);
+    z-index: 1;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+    background-position: left top;
+    background-repeat: repeat;
+    padding: 2%;
+    text-align: left;
+  }
+  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+text-align: left;
+transform: scale(1.03);
 }
 
 #navbar a {
@@ -29,7 +48,7 @@
 
 #searchbar {
     display: inline-block !important;
-    width:75vw;
+    width:65vw;
     height: 8vh;
     font-family: FontAwesome;
     font-weight: normal;
@@ -89,6 +108,16 @@ iframe {
     filter: grayscale(100%);
 }
 
+.logintext {
+    border: 2px solid black;
+    height: 4%;
+}
+
+.lbut:hover {
+    background-color: white;
+    color: black;
+}
+
 .btn {
     background-color: black;
     color: white;
@@ -100,10 +129,18 @@ iframe {
 .logout {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
+    width: 10vw;
+    height: 8vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 2px solid black;
     float: left;
 }
-.profile img {
-    border-radius: 50%;
+
+.logout:hover {
+    background-color: white;
+    color: black;
 }
 
 .Information h3 {

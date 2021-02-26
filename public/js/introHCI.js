@@ -29,6 +29,15 @@ function initializePage() {
         $("#yes").css('background-color', 'white');
         $("#yes").css('color', 'black');
 	});
+
+    if($('#searchbar').val() == '') {
+        document.querySelector("#viewrep").disabled = true;
+        console.log("empty");
+    }
+    else {
+        document.querySelector("#viewrep").disabled = false;
+        console.log("NOT empty");
+    }
 }
 
 

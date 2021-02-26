@@ -7,9 +7,10 @@
 	<!-- icons stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <input id="searchbar" type="text" placeholder="&#xF002;    Search for a Location...">
-        <a href="report"><button class="report">VIEW REPORT</button></a>
+    <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+        <a href="/"><button id="logout" class="logout"><i class="fa fa-sign-out fa-lg"></i></button></a>
+        <a href="report"><button id="viewrep" class="report">VIEW REPORT</button></a>
+        <input class="searchbar" id="searchbar" type="text" placeholder="&#xF002;    Search for a Location...">
         <!-- CREDIT: This code was generated and expalined to us by https://www.embedgooglemap.net/ -->
         <div class="mapouter">
             <div class="canvas">
@@ -20,7 +21,7 @@
             </div>
         </div>
         <div id="navbar">
-            <a href="favorite"><i id="btn" class="fa fa-heart fa-lg"></i></a>
+            <a href="favorite"><i id="btn" class="fa fa-street-view fa-lg"></i></a>
             <a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
             <a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
         </div>
