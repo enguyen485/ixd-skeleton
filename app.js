@@ -20,6 +20,8 @@ var signup = require('./routes/signup');
 var addLocation = require('./routes/addLocation');
 var deleteLocation = require('./routes/deleteLocation');
 var updateResult = require('./routes/updateResult');
+var addUser = require('./routes/addUser');
+var checkLogin = require('./routes/checkLogin');
 
 var app = express();
 
@@ -54,6 +56,8 @@ app.get('/signup', signup.view);
 app.get('/addLocation', addLocation.addLocation);
 app.get('/deleteLocation', deleteLocation.deleteLocation);
 app.get('/updateResult', updateResult.updateResult);
+app.get('/addUser', addUser.addUser);
+app.get('/checkLogin', checkLogin.checkLogin);
 
 // Example route
 // app.get('/users', user.list);

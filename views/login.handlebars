@@ -16,14 +16,19 @@
 		<div class="Information">
 			<img id="photo" class='img-responsive' src="images/Co-track.jpg" />
 			<hr>
-			<form>
-				<input class="logintext" type="text" id="username" placeholder="Username">
+			{{#each Error}}
+				<h5>{{Message}}</h5>
+			{{/each}}
+			<form id="login" role="form" method="get" action="/checkLogin">
+				<input class="logintext" type="text" id="username" name="username" placeholder="Username">
 				<br>
 				<br>
-				<input class="logintext" type="text" id="password" placeholder="Password">
+				<input class="logintext" type="text" id="password" name="password" placeholder="Password">
 				<br>
+				<br>
+				<input class="btn" type="submit" value="LOGIN">
 			</form>
-			<a href="profile"><button class="btn lbut" id="login" class="btn">LOGIN</button></a>
+			
 			<h5>Have a facebook account? Use it to login!</h5>
 			<p class="facebookLogin">
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">

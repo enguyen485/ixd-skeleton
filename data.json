@@ -1,7 +1,9 @@
 {
-	"PositiveResult":[
+	"Users": [
 		{
-			"Positive": ""
+			"Username": "enguyen",
+			"Password": "12345",
+			"Email": "en@gmail.com"
 		}
 	],
 	"LocationsVisited": [
@@ -48,6 +50,16 @@
 			"Place": "Costco, 8543 3rd St.",
 			"Positive": 39,
 			"Total": 97	
+		}
+	],
+	"PositiveResult":[
+		{
+			"Positive": ""
+		}
+	],
+	"Error":[
+		{
+			"Message": ""
 		}
 	]
 }

@@ -14,19 +14,25 @@
 		<a href="/"><button id="logout" class="btn logout"><i class="fa fa-arrow-right"></i></button></a><br><br><br><br>
 		<div class="Information">
 			<img id="photo" class='img-responsive' src="images/Co-track.jpg" /> <br>
-			<form>
-				<input type="text" class="logintext" id="username" placeholder="Username">
+			{{#each Error}}
+				<h5>{{Message}}</h5>
+			{{/each}}
+			<form id="signupform" role="form" method="get" action="/addUser">
+				<input type="text" class="logintext" id="username" name="username" placeholder="Username">
 				<br>
 				<br>
-				<input type="text" class="logintext" id="password" placeholder="Password">
+				<input type="text" class="logintext" id="password" name="password" placeholder="Password">
 				<br>
 				<br>
-				<input type="text" class="logintext" id="reenterpassword" placeholder="Re-Enter Password">
+				<input type="text" class="logintext" id="reenterpassword" name="reenter" placeholder="Re-Enter Password">
 				<br>
 				<br>
-				<input type="text" class="logintext" id="email" placeholder="Email Address">
+				<input type="text" class="logintext" id="email" name="email" placeholder="Email Address">
+				<br>
+				<br>
+				<input class="btn" type="submit" value="SIGN UP">
 			</form>
-			<a href="profile"><button class="btn lbut" id="signup" class="btn">SIGN UP</button></a>
+			
 		</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/introHCI.js"></script>
