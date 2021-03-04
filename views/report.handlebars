@@ -28,24 +28,11 @@
 				</tr>
 			{{#each SavedLocations}}
 				<div class ="Locations">
-					{{!-- <text>{{Place}}</text>
-					<text>| Positive Cases:</text>
-					<text>{{Positive}}</text> 
-					<text>/ Total Reported:</text>
-					<text>{{Total}}</text> --}}
-					{{!-- <input type="text" readonly="readonly" value="{{Place}}"> 
-					<input type="text" readonly="readonly" value="Positive Cases:  {{Positive}}">
-					<input type="text" readonly="readonly" value="Total Reported:  {{Total}}"> <br><br> --}}
 					<tr>
 						<th>{{Place}}</th>
 						<th>{{Positive}}</th>
 						<th>{{Total}}</th>
 					</tr>
-					{{!-- <form id="deleteLocationForm" role="form" method="delete" action="/deleteLocation">
-						<input type="text" readonly="readonly" id="Location" name="Location" value="{{Place}}">
-						<input type="text" readonly="readonly" id="Date" name="Date" value="{{Date}}">
-						<input class="btn" type="submit" value="X">
-					</form> --}}
 				</div>
 			{{/each}}
 			</table>
