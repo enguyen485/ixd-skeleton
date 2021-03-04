@@ -27,6 +27,6 @@ exports.addUser = function(request, response) {
                     "Email" : email		
                     }
         data.Users.push(jsonObj);
-        response.render("index", data);
+        response.render("login", data);
     }
 }

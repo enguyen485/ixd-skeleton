@@ -1,3 +1,5 @@
+var data = require("../data.json");
 exports.view = function(req, res){
-  res.render("login")
+  data.Error[0].Message = "";
+  res.render("login");
 };

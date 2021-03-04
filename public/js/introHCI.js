@@ -66,7 +66,6 @@ function openForm() {
     $("#myForm").html(newHTML);
   }
 
-
 function altertChange() {
     alert("Success! Your password has been updated.");
 }

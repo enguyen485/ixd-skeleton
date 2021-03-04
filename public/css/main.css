@@ -108,6 +108,10 @@ iframe {
     filter: grayscale(100%);
 }
 
+h5 {
+    color: red;
+}
+
 .logintext {
     border: 2px solid black;
     height: 4%;
