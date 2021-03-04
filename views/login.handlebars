@@ -6,6 +6,9 @@
 	<link href="css/main.css" rel="stylesheet">
 	<!-- icons stylesheet -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="/js/introHCI.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 </head>
 <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
 
@@ -21,6 +24,11 @@
 				<br>
 			</form>
 			<a href="profile"><button class="btn lbut" id="login" class="btn">LOGIN</button></a>
+			<h5>Have a facebook account? Use it to login!</h5>
+			<p class="facebookLogin">
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+				</fb:login-button>
+			</p>
 			<hr>
 			<h5>Don't have an account yet?</h5>
 			<a href="signup"><button class="btn lbut" id="signup" class="btn">SIGN UP</button></a>
