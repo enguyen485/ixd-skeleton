@@ -3,7 +3,7 @@
 		{
 			"Username": "test",
 			"Password": "12345",
-			"Email": "en@gmail.com"
+			"Email": "test@gmail.com"
 		}
 	],
 	"LocationsVisited": [
@@ -32,7 +32,7 @@
 			"Total": 73	
 		},
 		{
-			"Place": "Whole Foods, 3485 Third St.",
+			"Place": "Whole Foods Market, 8825 Villa La Jolla Dr",
 			"Positive": 3,
 			"Total": 59	
 		},
@@ -40,6 +40,23 @@
 			"Place": "Vons, 7788 Regents Rd",
 			"Positive": 3,
 			"Total": 34	
+		},
+		{
+			"Place": "UCLA",
+			"Positive": 94,
+			"Total": 167	
+		},
+		{
+			"Place": "Costco, 4605 Morena Blvd",
+			"Positive": 39,
+			"Total": 97	
+		}
+	],
+	"FavoritedLocations": [
+		{
+			"Place": "Target, 8251 Mira Mesa Blvd",
+			"Positive": 10,
+			"Total": 40			
 		},
 		{
 			"Place": "UCLA",

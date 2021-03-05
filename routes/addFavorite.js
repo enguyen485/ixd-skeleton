@@ -6,8 +6,8 @@ exports.addFavorite = function(request, response) {
     var total = data.Report[0].Total;
 	if(place != "" ){
 		var found = false;
-		for(i = 0; i < data.SavedLocations.length; i++){
-			if(place == data.SavedLocations[i].Place){
+		for(i = 0; i < data.FavoritedLocations.length; i++){
+			if(place == data.FavoritedLocations[i].Place){
 				found = true;
 			}
 		}
@@ -15,11 +15,19 @@ exports.addFavorite = function(request, response) {
 			var jsonObj = { "Place": place,
 					"Positive": pos,
                     "Total": total}
-			data.SavedLocations.unshift(jsonObj);
+			data.FavoritedLocations.unshift(jsonObj);
 		}
 		
 	}
-	
-    // TODO: should i do this bc then it will reset page?
+
+	for(i = 0; i < data.FavoritedLocations.length; i++){
+		for(j = 0; j < data.SavedLocations.length; j++){
+		  if(data.FavoritedLocations[i].Place == data.SavedLocations[j].Place){
+			data.FavoritedLocations[i].Positive = data.SavedLocations[j].Positive;
+			data.FavoritedLocations[i].Total = data.SavedLocations[j].Total;
+		  }
+		}
+	}
+
 	response.render('favorite', data);
 }

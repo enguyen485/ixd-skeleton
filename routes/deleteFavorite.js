@@ -4,20 +4,20 @@ exports.deleteFavorite = function(request, response) {
 	var place = request.query.Location
     var newJsonArr = []
     if(place != ""){
-        for (let i = 0; i < data.SavedLocations.length; i++) {
-            if(place != data.SavedLocations[i].Place){
+        for (let i = 0; i < data.FavoritedLocations.length; i++) {
+            if(place != data.FavoritedLocations[i].Place){
                 console.log("foudn some")
-                var jsonObj = { "Place": data.SavedLocations[i].Place,
-					"Positive": data.SavedLocations[i].Positive,
-                    "Total": data.SavedLocations[i].Total	
+                var jsonObj = { "Place": data.FavoritedLocations[i].Place,
+					"Positive": data.FavoritedLocations[i].Positive,
+                    "Total": data.FavoritedLocations[i].Total	
                 }
                 newJsonArr.push(jsonObj);
             }
             else {
-                console.log("found it and skipped: ", data.SavedLocations[i].Place);
+                console.log("found it and skipped: ", data.FavoritedLocations[i].Place);
             }
         }
-        data.SavedLocations = newJsonArr;
+        data.FavoritedLocations = newJsonArr;
     }
 
 	
