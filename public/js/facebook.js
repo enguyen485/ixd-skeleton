@@ -21,5 +21,5 @@ function checkLoginState() {
   function changeUser(response) {
     console.log("response", response);
     $(".facebookLogin").hide();
-    window.location.href = window.location.href + "profile";
+    window.location.href = "/profile";
   }

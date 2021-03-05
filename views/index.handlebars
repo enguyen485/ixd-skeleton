@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title>Profile</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
@@ -8,52 +10,37 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-<div id="navbar">
-	<a href="favorite"><i id="btn" class="fa fa-street-view fa-lg"></i></a>
-	<a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
-	<a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
-</div>
-<div class="container">
-		<a href="/"><button id="logout" class="btn logout"><i class="fa fa-sign-out fa-lg"></i></button></a><br><br><br><br>
+	<div id="navbar"></div>
+	<div class="container">
+		<div class="logoutbtn"></div>
 		<div id="photo" class="profile">
 			<img id="photo" class='img-responsive' src="images/Co-track.jpg" />
-			<!-- <h1 id="name">Nandini Kapa</h1>
-			<p>San Diego, CA</p> -->
 		</div>
-
 		<hr>
-
 		<div class="Information">
-
 			<h3>Where have I been?</h3>
-
 			{{#each LocationsVisited}}
 				<div class ="Locations">
 					<form id="deleteLocationForm" role="form" method="delete" action="/deleteLocation">
-						<input type="text" readonly="readonly" id="Location" name="Location" value="{{Place}}">
-						<input type="text" readonly="readonly" id="Date" name="Date" value="{{Date}}">
+						<input class="prof" type="text" readonly="readonly" id="Location" name="Location" value="{{Place}}">
+						<input class="prof" type="text" readonly="readonly" id="Date" name="Date" value="{{Date}}">
 						<input class="btn" type="submit" value="X">
 					</form>
 				</div>
 			{{/each}}
 			<br>
-
 			<form id="addLocationForm" role="form" method="get" action="/addLocation">
 				<input type="text" id="locate" name="Location" placeholder="Location">
 				<input type="date" id="date" name="Date" ><br><br>
 				<input class="btn" type="submit" value="ADD">
 			</form>
-
 			<hr>
 			<h3>Currently positive with COVID-19?</h3>
 			<form id="positiveForm" role="form" method="update" action="/updateResult">
-				<input class="btn" onclick="alertYES()" type="submit" id="Result" name="Result" value="YES">
-				<input class="btn" onclick="alertNO()" type="submit" id="Result" name="Result" value="NO">
+				<input class="btn yes" onclick="alertYES()" type="submit" id="Result" name="Result" value="YES">
+				<input class="btn no" onclick="alertNO()" type="submit" id="Result" name="Result" value="NO">
 			</form>
-			
-
 			<hr>
-
 			<a href="password"><button id="password" class="btn">CHANGE PASSWORD</button></a>
 		</div>
 	<script src="https://code.jquery.com/jquery.js"></script>

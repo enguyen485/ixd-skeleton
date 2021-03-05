@@ -1,6 +1,8 @@
 <html>
 <head>
-	<title>View Report</title>
+	<title>Report</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
@@ -8,36 +10,22 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-<div id="navbar">
-	<a href="favorite"><i id="btn" class="fa fa-heart fa-lg"></i></a>
-	<a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
-	<a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
-</div>
+
 <div class="container">
-
-
+		<a href="/search"><button class="logout"><i class="fa fa-arrow-right"></i></button></a><br><br><br>
+		<img id="photo" class='img-responsive' src="images/Co-track.jpg" />
+		<hr>
 		<div class="Information">
-			<h1>Current Reported Cases</h1>
-			<hr>
-			<h3>Your Saved Locations:</h3>
-			<table>
-				<tr>
-					<th>Location</th>
-					<th>Positive Cases</th>
-					<th>Total Reported</th>
-				</tr>
-			{{#each SavedLocations}}
-				<div class ="Locations">
-					<tr>
-						<th>{{Place}}</th>
-						<th>{{Positive}}</th>
-						<th>{{Total}}</th>
-					</tr>
-				</div>
+			{{#each Report}}
+				<h1><u>Report for {{Place}}</u></h1>
+				<h2>There are <b>{{Positive}}/{{Total}}</b> <i>positive</i> reports of COVID-19 at this location.</h2>
 			{{/each}}
-			</table>
+			<hr>
+			<form id="favorite" role="form" method="get" action="/addFavorite">
+				<input class="btn" type="submit" value="SAVE SEARCH AS FAVORITE">
+			</form>
+			
 		</div>
-</div>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/introHCI.js"></script>
 </body>

@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title>Search Locations</title>
+    	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
@@ -8,26 +10,24 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
-        <a href="/"><button id="logout" class="logout"><i class="fa fa-sign-out fa-lg"></i></button></a>
-        <button id="viewrep" class="report" onclick="openForm()">VIEW REPORT</button>
-        <input class="searchbar" id="searchbar" type="text" placeholder="&#xF002;    Search for a Location...">
+        <div class="logoutbtn"></div>
+
+        <!-- search and report functionality -->
+        <a href="/report"></a><button id="viewrep" onclick="openForm()" class="report" >VIEW REPORT</button></a>
+        <input class="searchbar" id="searchbar" name="Location" type="text" placeholder="&#xF002;    Search for a Location...">
+
         <!-- CREDIT: This code was generated and expalined to us by https://www.embedgooglemap.net/ -->
-        <div id="myForm"></div>
         <div class="mapouter">
             <div class="canvas">
                 <div class="details">
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=1347%20Paseo%20Anacapa,%20San%20Dimas&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
                 <a href="https://putlocker-is.org"></a>
                 <br>
                 <a href="https://www.embedgooglemap.net"></a>
             </div>
         </div>
-        <div id="navbar">
-            <a href="favorite"><i id="btn" class="fa fa-street-view fa-lg"></i></a>
-            <a href="search"><i id="btn" class="fa fa-search fa-lg"></i></a>
-            <a href="profile"><i id="btn" class="fa fa-user fa-lg"></i></a>
-        </div>
+        <div id="navbar"></div>
         <script src="https://code.jquery.com/jquery.js"></script>
 	    <script src="/js/introHCI.js"></script>
 	</body>

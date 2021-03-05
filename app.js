@@ -22,6 +22,9 @@ var deleteLocation = require('./routes/deleteLocation');
 var updateResult = require('./routes/updateResult');
 var addUser = require('./routes/addUser');
 var checkLogin = require('./routes/checkLogin');
+var deleteFavorite = require('./routes/deleteFavorite');
+var addFavorite = require('./routes/addFavorite');
+var addReport = require('./routes/addReport');
 
 var app = express();
 
@@ -55,9 +58,12 @@ app.get('/report', report.view);
 app.get('/signup', signup.view);
 app.get('/addLocation', addLocation.addLocation);
 app.get('/deleteLocation', deleteLocation.deleteLocation);
+app.get('/deleteFavorite', deleteFavorite.deleteFavorite);
+app.get('/addFavorite', addFavorite.addFavorite);
 app.get('/updateResult', updateResult.updateResult);
 app.get('/addUser', addUser.addUser);
 app.get('/checkLogin', checkLogin.checkLogin);
+app.get('/addReport', addReport.addReport);
 
 // Example route
 // app.get('/users', user.list);

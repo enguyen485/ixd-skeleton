@@ -1,28 +1,28 @@
 {
 	"Users": [
 		{
-			"Username": "enguyen",
+			"Username": "test",
 			"Password": "12345",
 			"Email": "en@gmail.com"
 		}
 	],
 	"LocationsVisited": [
 		{
-			"Place": "Target, 123 Dr.",
+			"Place": "Target, 8251 Mira Mesa Blvd",
 			"Date": "2021-02-15"			
 		},
 		{
-			"Place": "Vons, 54 Nova Ave.",
+			"Place": "Vons, 7788 Regents Rd",
 			"Date": "2021-02-16"
 		},
 		{
-			"Place": "Costco, 8543 3rd St.",
+			"Place": "Costco, 4605 Morena Blvd",
 			"Date": "2021-02-18"
 		}
 	],
 	"SavedLocations": [
 		{
-			"Place": "Target, 123 Dr.",
+			"Place": "Target, 8251 Mira Mesa Blvd",
 			"Positive": 10,
 			"Total": 40			
 		},
@@ -37,17 +37,17 @@
 			"Total": 59	
 		},
 		{
-			"Place": "Vons, 54 Nova Ave.",
+			"Place": "Vons, 7788 Regents Rd",
 			"Positive": 3,
 			"Total": 34	
 		},
 		{
-			"Place": "Walmart, 537 First Ave.",
+			"Place": "UCLA",
 			"Positive": 94,
 			"Total": 167	
 		},
 		{
-			"Place": "Costco, 8543 3rd St.",
+			"Place": "Costco, 4605 Morena Blvd",
 			"Positive": 39,
 			"Total": 97	
 		}
@@ -60,6 +60,13 @@
 	"Error":[
 		{
 			"Message": ""
+		}
+	],
+	"Report":[
+		{
+			"Place": "",
+			"Positive": "",
+			"Total": ""
 		}
 	]
 }
