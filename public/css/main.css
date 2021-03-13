@@ -86,6 +86,10 @@
     filter: grayscale(100%);
 }
 
+#locate, #date {
+    width: 40vw;
+}
+
 .mapouter{
     height:100vh;
     width:100vw;
